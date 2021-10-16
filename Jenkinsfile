@@ -17,7 +17,7 @@ pipeline {
         container('kaniko') {
           script {
             sh '''
-            /kaniko/executor --dockerfile `pwd`/src/adservice/Dockerfile \
+            /kaniko/executor --dockerfile `pwd`/Dockerfile \
                              --context `pwd` \
                              --destination=marinyuk/adservice:${BUILD_NUMBER}
             '''
